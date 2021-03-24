@@ -19,7 +19,18 @@ document.querySelectorAll("img")[0].setAttribute("src", randomImgSource);
 var randomNumber2 = Math.floor(Math.random()*6) + 1;
 var randomImgSource = "images/dice" + randomNumber2 + ".png";
 
-var secondDiceImg = document.querySelectorAll("img")[1]
+var secondDiceImg = document.querySelectorAll("img")[1];
+console.log(secondDiceImg);
 secondDiceImg.setAttribute("src", randomImgSource);
+
 // --------------------------------------------------------------------------------------------------
 // now, we have to say who wins based on the dice roll (player 1 or player 2)
+// to change the HTML, use innerHTML
+
+if (randomNumber1 === randomNumber2){
+    document.querySelector("h1").innerHTML = "The dice rolls are the same";
+} else if (randomNumber1 > randomNumber2) {
+    document.querySelector("h1").innerHTML = "Dice 1 is higher";
+} else {
+    document.querySelector("h1").innerHTML = "Dice 2 is higher";
+}
