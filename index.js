@@ -34,3 +34,5 @@ if (randomNumber1 === randomNumber2){
 } else {
     document.querySelector("h1").innerHTML = "Dice 2 is higher";
 }
+
+// maybe add in a section that will display the sum of the two dice rolls
